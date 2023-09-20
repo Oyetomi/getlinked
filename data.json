@@ -1,0 +1,88 @@
+[
+  {
+    "Hero": {
+      "sub1": "Igniting a Revolution in HR Innovation",
+      "title": "getlinked Tech \n",
+      "titleSuffix": "Hackathon",
+      "titleSuffixSuffix": "1.0",
+      "info": "Participate in getlinked tech Hackathon 2023 stand a chance to \n  win a Big prize",
+      "heading1": "Introduction to getlinked",
+      "subcontent1": " Our tech hackathon is a melting pot of \n visionaries, and its purpose is as clear as \n day: to shape the future. Whether you're \n a coding genius, a design maverick, or a \n concept wizard, you'll have the chance to \n transform your ideas into reality. \n Solving real-world problems, pushing the boundaries \n of technology, and creating solutions that can \n change the world, that's what we're all about!",
+      "subcontent2": "Only original projects created during the hackathon are allowed; plagiarism is prohibited.\n Maintain a high standard of behavior, with zero tolerance for harassment or misconduct. \n ubmit your project on time via the official hackathon website; late entries won't be considered.",
+      "attributeTitles": {
+      "attribute1": "Innovation and Creativity: ",
+      "attribute2": "Functionality: ",
+      "attribute3": "Impact and Relevance: ",
+      "attribute4": "Technical Complexity: ",
+      "attribute5": "Adherence to Hackathon Rules: "
+    },
+      "attributeContent": {
+        "attributeContent1": "Evaluate the \n uniqueness and creativity of the solution. \n Consider whether it addresses a real-world \n problem in a novel way or introduces innovative \n features.",
+        "attributeContent2": "Assess how well the solution \n works. Does it perform its intended functions \n effectively and without major issues? Judges \n would consider the completeness and \n robustness of the solution.",
+        "attributeContent3": "Determine the \n potential impact of the solution in the real world. \n Does it address a significant problem, and is it \n relevant to the target audience? Judges would \n assess the potential social, economic, or \n environmental benefits.",
+        "attributeContent4": "Evaluate the technical \n sophistication of the solution. Judges would \n consider the complexity of the code, the use of \n advanced technologies or algorithms, and the \n scalability of the solution.",
+        "attributeContent5": "Judges will \n Ensure that the team adhered to the rules and \n guidelines of the hackathon, including deadlines, \n use of specific technologies or APIs, and any \n other competition-specific requirements."
+      }
+    },
+    "Faq": {
+      "subcontent": "We got answers to the questions that you might \n want to ask about getlinked Hackathon 1.0",
+      "questions": [
+        "Can I work on a project I started before the \n hackathon?",
+        "What happens if I need help during the \n hackathon?",
+        "What happens if I don't have an idea for \n a project?",
+        "Can I join a team or do I have to come with one?",
+        "What happens after the hackathon ends",
+        "Can I work on a project I started before the hackathon?"
+      ],
+      "answers": [
+        "Absolutely! You can work on a project that you started before the hackathon. Just make sure to check the hackathon's rules and clarify any doubts with the organizers if needed. Good luck with your project!",
+        "**Ask Organizers:** \n 2. **Team Collaboration:** \n 3. **Mentors and Workshops:** \n 4. **Online Communities:** \n  5. **Online Documentation:** Often, hackathons provide access to documentation, APIs, and resources.",
+        "1. **Brainstorm:** Spend some time brainstorming and jotting down your interests, hobbies, and skills. \n 2. **Team up:** If the hackathon allows it, consider joining a team. \n 3. **Explore the Theme:** Many hackathons have a specific theme or challenge. \n 4. **Inspiration from Technology:** Browse through the technologies, APIs, or tools provided by the hackathon. \n 5. **Talk to Others:** Engage in conversations with fellow participants.",
+        "You can typically join a team at a hackathon even if you don't come with one. \n Many hackathons are open to both individual participants and those who want to form teams.",
+        " If you don't have an idea for a project at the beginning of a hackathon, here are some steps you can take: \n  1. **Explore the Hackathon Theme:** Many hackathons have a specific theme or challenge. \n  2. **Brainstorm with Others:** Engage in discussions with fellow participants \n  3. **Problem-Solving Approach:** Think about problems or challenges you've encountered in your daily life \n 4. **Review Provided Resources:** Check out any technologies, APIs, or tools provided by the hackathon organizers.  \n",
+        "If you need help during a hackathon, there are several avenues to seek assistance: \n 1. **Hackathon Organizers:** The organizers are there to support participants. \n 2. **Team Collaboration:** If you're part of a team, collaborate with your teammates. \n 3. **Mentors and Workshops:** Many hackathons provide mentors or workshops where experienced individuals offer guidance"
+      ]
+    },
+    "prizes": {
+      "title": "Prizes \n",
+      "subtitle": "and Rewards",
+      "subcontent": "Highlight of the prizes or rewards for winners \n and for participants."
+    },
+    "partners": {
+      "title": "Partners and Sponsors",
+      "subcontent": "Getlinked Hackathon 1.0 is honored to have the \n following major companies as its partners and \n sponsors"
+    },
+    "policy": {
+      "title": "Privacy Policy and \n",
+      "subtitle": "Terms",
+      "titleSubContent": "Last updated on September 12, 2023",
+      "subcontent": "Below are our privacy & policy, which outline a \n lot of goodies. it’s our aim to always take of our \n participant",
+      "lastupdated": "Last updated on September 12, 2023",
+      "info": {
+        "content": "At getlinked tech Hackathon 1.0, we \n value your privacy and are committed \n to protecting your personal information. \n This Privacy Policy outlines how we collect,\n use, disclose, and safeguard your data \n when you participate in our tech hackathon \n event. By participating in our event, you \n consent to the practices described in this \n policy.",
+        "title": "Licensing Policy",
+        "subtitle": "Here are terms of our Standard License:",
+        "info": {
+          "first": "The Standard License grants you a \n non-exclusive right to navigate and \n register for our event",
+          "second": "You are licensed to use the item \n available at any free source sites, for \n your project development"
+        }
+      }
+    },
+    "footer": {
+      "title": "get",
+      "titleSuffix": "linked",
+      "info": "Getlinked Tech Hackathon is a technology \n innovation program established by a group \n of organizations with the aim of showcasing \n young and talented individuals in the field \n of technology",
+      "contact": {
+        "telephone": "+234 679 81819",
+        "location": "27, Alara Street \n Yaba 100012 \n Lagos State"
+      },
+      "copyright": "All rights reserved. © getlinked Ltd.",
+      "usefulLinks": [
+        "Overview",
+        "Timeline",
+        "FAQs",
+        "Register"
+      ]
+    }
+  }
+]

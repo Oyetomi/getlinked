@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("./assets/fonts/ClashDisplay.woff2");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat.woff2");
+  font-display: fallback;
+}
