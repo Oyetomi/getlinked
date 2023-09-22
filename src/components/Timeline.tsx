@@ -1,10 +1,23 @@
+import purplestar from "../assets/images/purple-star.svg";
+import transparentstar from "../assets/images/transparent-star.svg";
+
 const GetLinkedTimeline = () => {
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div
+      id="Timeline"
+      className="w-full max-w-3xl mx-auto border border-fuchsia-700 bg-fuchsia-400 bg-opacity-10 rounded-lg py-10 px-20 text-left border-b-2 border-b-fuchsia-500 border-opacity-10 mb-20"
+    >
       <div className="-my-6">
         <div className="relative pl-8 sm:pl-32 py-6 group">
-          <span className="mr-6 font-ClashDisplay font-medium text-2xl text-white mb-6 md:text-6xl">
+          <span className="mr-6 font-ClashDisplay font-medium text-4xl text-white mb-6 md:text-6xl">
             Timeline
+            <span>
+              <img
+                className="absolute top-1/3 left-12 scale-125"
+                src={purplestar}
+                alt="a purple star"
+              />
+            </span>
           </span>
           <p className="font-Montserrat text-white text-sm mb-10 md:text-2xl">
             Here is the breakdown of the time we anticipate using for the
@@ -70,6 +83,13 @@ const GetLinkedTimeline = () => {
           <div className="text-white font-Montserrat">
             All teams whom idea has been accepted into getlinked tech hackathon
             1.0 2023 are formally announced
+            <span>
+              <img
+                className="absolute top-1/3 right-12 scale-125"
+                src={purplestar}
+                alt="a purple star"
+              />
+            </span>
           </div>
         </div>
         <div className="relative pl-8 sm:pl-32 py-6 group">
@@ -85,6 +105,13 @@ const GetLinkedTimeline = () => {
           <div className="text-white font-Montserrat">
             Accepted teams can now proceed to build their ground breaking skill
             driven solutions
+            <span>
+              <img
+                className="absolute top-1/3 left-12 scale-125"
+                src={transparentstar}
+                alt="a transparent star"
+              />
+            </span>
           </div>
         </div>
 

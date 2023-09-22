@@ -8,39 +8,87 @@ import hackathonguy from "../assets/images/Hackathon guy.svg";
 import thebigidea from "../assets/images/The big idea.svg";
 import animatedwoman from "../assets/images/animated-woman-sitting.svg";
 import animatedmanwoman from "../assets/images/animated-man-woman.svg";
+import transparentstar from "../assets/images/transparent-star.svg";
 import arrow from "../assets/images/arrow.svg";
 import data from "../../data.json";
 
 import { Button } from "./common/Button.tsx";
+import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  const [countdown, setCountdown] = useState<number>(24 * 60 * 60); // 24 hours in seconds
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (countdown > 0) {
+        setCountdown(countdown - 1);
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [countdown]);
+
+  const formatTime = (timeInSeconds: number) => {
+    const hours = Math.floor(timeInSeconds / 3600);
+    const minutes = Math.floor((timeInSeconds % 3600) / 60);
+    const seconds = timeInSeconds % 60;
+
+    return {
+      hours: String(hours).padStart(2, "0"),
+      minutes: String(minutes).padStart(2, "0"),
+      seconds: String(seconds).padStart(2, "0"),
+    };
+  };
+
+  const { hours, minutes, seconds } = formatTime(countdown);
+
   return (
-    <main className="border-b-2 border-b-fuchsia-500 border-opacity-5">
+    <main className="border-b-2 border-b-fuchsia-500 border-opacity-5 ">
       <div className="relative">
         {data.map((section) => (
-          <h2 key={section.Hero.sub1} className="italic text-white text-sm font-Montserrat md:text-4xl">
+          <h2
+            key={section.Hero.sub1}
+            className="italic text-white text-sm font-Montserrat md:text-4xl"
+          >
             {section.Hero.sub1}
           </h2>
         ))}
-        <div className="h-30 w-30">
-          <span className="absolute left-1/2 ml-10">
-            <img src={image} className="" alt="curved pink accent stroke" />
+        <div className="h-5 w-5">
+          <span className="absolute left-1/2 ml-10 md:ml-44">
+            <img
+              src={image}
+              className="md:scale-150"
+              alt="curved pink accent stroke"
+            />
           </span>
         </div>
       </div>
 
       <h1 className="relative text-white mt-16 mb-3 text-4xl font-ClashDisplay md:text-6xl">
         {data.map((section) => (
-          <span key={section.Hero.title} className="whitespace-pre-line">{section.Hero.title}</span>
+          <span key={section.Hero.title} className="whitespace-pre-line">
+            {section.Hero.title}
+          </span>
         ))}
         {data.map((section) => (
-          <span key={section.Hero.titleSuffix} className="md:text-6xl">{section.Hero.titleSuffix}</span>
+          <span key={section.Hero.titleSuffix} className="md:text-6xl">
+            {section.Hero.titleSuffix}
+          </span>
         ))}
-        <span className="inline-flex text-fuchsia-500 text-6xl">
+        <span className="inline-flex text-fuchsia-500 text-6xl ">
           {data.map((section) => (
-            <span key={section.Hero.titleSuffixSuffix} className="md:text-6xl">{section.Hero.titleSuffixSuffix}</span>
+            <span key={section.Hero.titleSuffixSuffix} className="md:text-6xl">
+              {section.Hero.titleSuffixSuffix}
+            </span>
           ))}
-          <img className="md:scale-150 md:mr-6" src={chain} alt="a chain emoji" />
+          <img
+            className="md:scale-150 md:mr-6"
+            src={chain}
+            alt="a chain emoji"
+          />
           <img className="md:scale-150 " src={flame} alt="a flame emoji" />
           <img
             className="absolute left-1/2 -top-3.5 ml-24 md:scale-150"
@@ -53,48 +101,100 @@ export const Hero = () => {
         </span>
       </h1>
       {data.map((section) => (
-        <span key={section.Hero.info} className="text-white text-sm font-Montserrat font-light">
+        <span
+          key={section.Hero.info}
+          className="text-white text-sm font-Montserrat font-light"
+        >
           {section.Hero.info}
         </span>
       ))}
 
-      <Button name="Register" />
-      <figure className="flex justify-center mb-6 md:scale-150">
-        <img src={hackathonguy} alt="an image a guy wearing a VR headset" />
-      </figure>
-      <article>
+      <NavLink to="register">
+        <Button name="Register"></Button>
+      </NavLink>
+      <div className="md:flex md:justify-center md:gap-20">
+        <span className="absolute left-12">
+          <img src={transparentstar} alt="" />
+        </span>
+        <div className="flex justify-center text-center font-Montserrat text-white text-2xl border border-fuchsia-700 bg-fuchsia-400 bg-opacity-10 rounded-lg py-10 px-20 mb-6 md:text-6xl lg:mb-56 border-opacity-10">
+          <div className="flex justify-center space-x-14">
+            <span className="text-2xl md:text-6xl font-bold font-ClashDisplay">
+              {hours}
+              <span className="text-fuchsia-500">Days</span>
+            </span>
+            <span className="text-2xl md:text-4xl font-bold font-ClashDisplay">
+              {minutes}
+              <span className="text-fuchsia-500">Hours</span>
+            </span>
+            <span className="text-sm md:text-2xl font-bold font-ClashDisplay">
+              {seconds}
+              <span className="text-fuchsia-500">Seconds</span>
+            </span>
+          </div>
+        </div>
+        <figure className="flex justify-center mb-6 md:scale-150 md:hidden lg:block">
+          <img src={hackathonguy} alt="an image a guy wearing a VR headset" />
+        </figure>
+      </div>
+
+      <article className="mt-20">
         <div className="border-b-2 border-b-fuchsia-500 border-opacity-5 md:flex md:justify-evenly">
-          <figure className="flex justify-center md:scale-100">
-            <img src={thebigidea} alt="a light bulb" />
+          <figure className=" relative flex justify-center md:scale-100">
+            <img className="" src={thebigidea} alt="a light bulb" />
+            <span className="absolute top-1/4 left-10 md:scale-125">
+              <img src={purplestar} alt="a purple star" />
+            </span>
           </figure>
           <span className="flex justify-center mt-6">
-            <img src={arrow} alt="an arrow" />
+            <img className="" src={arrow} alt="an arrow" />
           </span>
-          <h3 className="text-white font-ClashDisplay text-2xl mt-10 mb-16 md:text-4xl md:mt-24">
+          <h3
+            id="Overview"
+            className="relative text-white font-ClashDisplay text-2xl mt-2 mb-16 md:text-4xl md:mt-24"
+          >
             Introduction to getlinked<br></br>
-            <span className="text-fuchsia-500 ">tech Hackathon 1.0</span>
+            <span className="block text-fuchsia-500 ">tech Hackathon 1.0</span>
             {data.map((section) => (
-              <p key={section.Hero.subcontent1} className="text-sm mt-2 leading-loose whitespace-pre-line md:text-2xl">
+              <span
+                key={section.Hero.subcontent1}
+                className="text-sm mt-2 leading-loose whitespace-pre-line md:text-2xl"
+              >
                 {section.Hero.subcontent1}
-              </p>
+              </span>
             ))}
+            <span className="absolute top-1/4 right-10 md:scale-125">
+              <img src={purplestar} alt="a purple star" />
+            </span>
           </h3>
         </div>
-        <div className="border-b-2 border-b-fuchsia-500 border-opacity-5 md:flex md:justify-evenly md:mt-12">
-          <figure className="flex justify-center mt-16 md:scale-100">
+        <div className="border-b-2 border-b-fuchsia-500 border-opacity-5 md:flex md:justify-center md:mt-12">
+          <figure className="relative flex justify-center mt-16 md:scale-100">
             <img
               src={animatedwoman}
               alt="an animated woman sitting on a chair"
             />
+            <span className="absolute top-1/4 left-10 md:scale-125">
+              <img src={star} alt="a purple star" />
+            </span>
           </figure>
-
           {data.map((section) => (
-            <span key={section.Hero.subcontent1} className="block text-sm leading-loose text-white mb-16 whitespace-pre-line md:text-2xl md:justify-center">
-                        <h4 className="text-white text-2xl font-ClashDisplay md:text-4xl">
-            Rules and<br></br>
-            <span className="text-fuchsia-500">Guidelines</span>
-          </h4>
-              {section.Hero.subcontent1}
+            <span
+              key={section.Hero.subcontent1}
+              className="block text-sm leading-loose text-white mb-16 whitespace-pre-line md:text-2xl"
+            >
+              <h4 className="relative text-white text-2xl font-ClashDisplay md:text-4xl md:mt-40">
+                Rules and<br></br>
+                <span className="text-fuchsia-500">Guidelines</span>
+                <span className="absolute top-1/4 right-10 md:scale-125">
+                  <img src={transparentstar} alt="a purple star" />
+                </span>
+              </h4>
+              <span className="relative">
+                {section.Hero.subcontent1}
+                <span className="absolute bottom-1/2 mr-2.5 left-10 md:scale-125">
+                  <img src={star} alt="a purple star" />
+                </span>
+              </span>
             </span>
           ))}
         </div>
@@ -119,64 +219,94 @@ export const Hero = () => {
 
           <span className="block text-white font-Montserrat text-sm mb-6 md:text-lg">
             {data.map((section) => (
-              <p key={section.Hero.attributeTitles.attribute1} className="inline text-fuchsia-500">
+              <p
+                key={section.Hero.attributeTitles.attribute1}
+                className="inline text-fuchsia-500"
+              >
                 {section.Hero.attributeTitles.attribute1}
               </p>
             ))}
 
             {data.map((section) => (
-              <p key={section.Hero.attributeContent.attributeContent1} className="whitespace-pre-line">
+              <p
+                key={section.Hero.attributeContent.attributeContent1}
+                className="whitespace-pre-line"
+              >
                 {section.Hero.attributeContent.attributeContent1}
               </p>
             ))}
           </span>
           <span className="block text-white font-Montserrat text-sm mb-6 md:text-lg">
             {data.map((section) => (
-              <p key={section.Hero.attributeTitles.attribute2} className="text-fuchsia-500 block">
+              <p
+                key={section.Hero.attributeTitles.attribute2}
+                className="text-fuchsia-500 block"
+              >
                 {section.Hero.attributeTitles.attribute2}
               </p>
             ))}
 
             {data.map((section) => (
-              <p key={section.Hero.attributeContent.attributeContent2} className="whitespace-pre-line">
+              <p
+                key={section.Hero.attributeContent.attributeContent2}
+                className="whitespace-pre-line"
+              >
                 {section.Hero.attributeContent.attributeContent2}
               </p>
             ))}
           </span>
           <span className="block text-white font-Montserrat text-sm mb-6 md:text-lg">
             {data.map((section) => (
-              <p key={section.Hero.attributeTitles.attribute3} className="inline text-fuchsia-500">
+              <p
+                key={section.Hero.attributeTitles.attribute3}
+                className="inline text-fuchsia-500"
+              >
                 {section.Hero.attributeTitles.attribute3}
               </p>
             ))}
 
             {data.map((section) => (
-              <p key={section.Hero.attributeContent.attributeContent3} className="whitespace-pre-line">
+              <p
+                key={section.Hero.attributeContent.attributeContent3}
+                className="whitespace-pre-line"
+              >
                 {section.Hero.attributeContent.attributeContent3}
               </p>
             ))}
           </span>
           <span className="block text-white font-Montserrat text-sm mb-6 md:text-lg">
             {data.map((section) => (
-              <p key={section.Hero.attributeTitles.attribute4} className="inline text-fuchsia-500">
+              <p
+                key={section.Hero.attributeTitles.attribute4}
+                className="inline text-fuchsia-500"
+              >
                 {section.Hero.attributeTitles.attribute4}
               </p>
             ))}
 
             {data.map((section) => (
-              <p key={section.Hero.attributeContent.attributeContent4} className="whitespace-pre-line">
+              <p
+                key={section.Hero.attributeContent.attributeContent4}
+                className="whitespace-pre-line"
+              >
                 {section.Hero.attributeContent.attributeContent4}
               </p>
             ))}
           </span>
           <span className="block text-white font-Montserrat text-sm mb-6 md:text-lg">
             {data.map((section) => (
-              <p key={section.Hero.attributeTitles.attribute5} className="inline text-fuchsia-500">
+              <p
+                key={section.Hero.attributeTitles.attribute5}
+                className="inline text-fuchsia-500"
+              >
                 {section.Hero.attributeTitles.attribute5}
               </p>
             ))}
             {data.map((section) => (
-              <p  key={section.Hero.attributeContent.attributeContent5} className="whitespace-pre-line">
+              <p
+                key={section.Hero.attributeContent.attributeContent5}
+                className="whitespace-pre-line"
+              >
                 {section.Hero.attributeContent.attributeContent5}
               </p>
             ))}

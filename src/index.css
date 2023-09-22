@@ -13,3 +13,7 @@
   src: url("./assets/fonts/Montserrat.woff2");
   font-display: fallback;
 }
+
+html {
+  scroll-behavior: smooth;
+}
