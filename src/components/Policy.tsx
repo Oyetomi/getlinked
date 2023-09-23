@@ -9,7 +9,7 @@ import transparentstar from "../assets/images/transparent-star.svg";
 export const Policy = () => {
   return (
     <section>
-      <div className="md:flex md:mt-40 md:m-auto ">
+      <div className="md:flex md:mt-40 md:m-auto justify-center">
         <div className="">
           <h5 className="block mb-2 mt-24 md:mt-36 text-white text-2xl font-ClashDisplay whitespace-pre-line md:text-6xl md:mr-16">
             {data.map((section) => section.policy.title)}
@@ -75,20 +75,21 @@ export const Policy = () => {
             <Button name="Read more"></Button>
           </span>
         </article>
-        <div className="relative md:hidden lg:flex lg:justify-center">
-          <span>
+        <div className="mt-24">
+          <div className="relative md:hidden lg:hidden">
             <img
-              src={privacyboy}
-              className="scale-75 m-auto object-contain"
-              alt="a boy holding a key standing on a lock"
+                src={privacyboy}
+                className=" m-auto object-contain h-56 scale-150"
+                alt="a boy holding a key standing on a lock"
             />
-          </span>
-          <img
-            className="scale-75 absolute top-1.5 left-20 right-28 opacity-40 object-contain"
-            src={secure}
-            alt="secure"
-          />
+            <img
+                className="absolute top-1.5 left-36 right-28 opacity-40 object-contain h-56 scale-150"
+                src={secure}
+                alt="secure"
+            />
+          </div>
         </div>
+
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ import axios from "axios";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "./common/Button.tsx";
+import GoBackHome from "../GoBackHome.tsx";
 
 type FormInput = {
   email: string;
@@ -76,6 +77,7 @@ export const Register = () => {
         </div>
       ) : (
         <section className="md:flex justify-center items-center">
+          <GoBackHome/>
           <span className="text-3xl md:mb-16 text-fuchsia-500 font-bold flex ml-10 md:hidden font-Montserrat">
             Register
           </span>
