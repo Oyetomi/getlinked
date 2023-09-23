@@ -123,7 +123,7 @@ export const Hero = () => {
               {minutes}
               <span className="text-fuchsia-500">Hours</span>
             </span>
-            <span className="text-sm md:text-2xl font-bold font-ClashDisplay">
+            <span className="text-2xl md:text-2xl font-bold font-ClashDisplay">
               {seconds}
               <span className="text-fuchsia-500">Seconds</span>
             </span>
