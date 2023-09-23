@@ -112,10 +112,10 @@ export const Hero = () => {
       <NavLink to="register">
         <Button name="Register"></Button>
       </NavLink>
-      <div className="md:flex md:justify-center md:gap-20">
-        <div className="flex justify-center text-center font-Montserrat text-white text-2xl border border-fuchsia-700 bg-fuchsia-400 bg-opacity-10 rounded-lg py-10 px-20 mb-6 md:text-6xl lg:mb-56 border-opacity-10">
+      <div className="justify-center md:flex md:justify-center md:gap-20">
+        <div className="flex justify-center text-center font-Montserrat text-white text-2xl border border-fuchsia-700 bg-fuchsia-400 bg-opacity-10 rounded-lg py-10 px-3 mb-6 md:text-6xl lg:mb-56 border-opacity-10">
           <div className="flex justify-center space-x-14">
-            <span className="text-4xl md:text-4xl font-bold font-ClashDisplay">
+            <span className="text-2xl md:text-4xl font-bold font-ClashDisplay">
               {hours}
               <span className="text-fuchsia-500">Days</span>
             </span>
