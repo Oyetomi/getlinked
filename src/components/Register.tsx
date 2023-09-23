@@ -1,4 +1,4 @@
-import designer from "../assets/images/3d-graphic-designer-showing-thumbs-up-png 1.svg";
+import designer from "../assets/images/3d-graphic-designer-showing-thumbs-up-png 1.webp";
 import manemojiwalking from "../assets/images/emoji-walking-man.svg";
 import womanemojiwalking from "../assets/images/emoji-walking-woman.svg";
 import congratulations from "../assets/images/congratulation.svg";
