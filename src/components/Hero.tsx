@@ -134,7 +134,7 @@ export const Hero = () => {
           </div>
         </div>
         <figure className="flex justify-center mb-6 md:scale-150 md:hidden lg:block">
-          <img src={hackathonguy} alt="an image a guy wearing a VR headset" />
+          <img loading={"lazy"} src={hackathonguy} alt="an image a guy wearing a VR headset" />
         </figure>
       </div>
 
