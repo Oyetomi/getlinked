@@ -117,16 +117,15 @@ export const Hero = () => {
           <div className="flex justify-center space-x-14">
             <div className="text-4xl md:text-4xl font-bold font-ClashDisplay">
               {hours}
-              <span className="text-fuchsia-500">D</span>
+              <span className="text-fuchsia-500">D<p className="hidden md:inline-block md:text-4xl md:font-ClashDisplay">ays</p></span>
             </div>
-            <div className="text-4xl md:text-2xl font-bold font-ClashDisplay">
+            <div className="text-4xl font-bold font-ClashDisplay">
               {minutes}
-              <span className="text-fuchsia-500">H</span>
+              <span className="text-fuchsia-500 text-4xl">H<p className="hidden md:inline-block md:text-4xl md:font-ClashDisplay">ours</p></span>
             </div>
-            <div className="text-4xl md:text-2xl font-bold font-ClashDisplay">
+            <div className="text-4xl font-bold font-ClashDisplay">
               {seconds}
-              <span className="text-fuchsia-500">S</span>
-            </div>
+              <span className="text-fuchsia-500 text-4xl">S<p className="hidden md:inline-block md:text-4xl md:font-ClashDisplay">econds</p></span></div>
           </div>
         </div>
         <figure className="flex justify-center mb-6 md:scale-150 md:hidden lg:block">
