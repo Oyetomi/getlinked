@@ -1,5 +1,5 @@
 import data from "../../data.json";
-import partners from "../assets/images/Partner and sponsors section.svg";
+import partners from "../assets/images/Partner and sponsors section.webp";
 import purplestar from "../assets/images/purple-star.svg";
 import transparentstar from "../assets/images/transparent-star.svg";
 
@@ -28,13 +28,6 @@ export const Partners = () => {
       </p>
       <span className="flex justify-center mt-10 md:scale-150 md:mt-20">
         <img src={partners} alt="an animated trophy with a dart" />
-        <span>
-          <img
-            className="absolute ml-20 scale-125 opacity-40"
-            src={purplestar}
-            alt="a purple star"
-          />
-        </span>
       </span>
     </section>
   );

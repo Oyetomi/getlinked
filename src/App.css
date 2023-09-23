@@ -1,4 +1,4 @@
-#root {
+#root,html,body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -7,21 +7,3 @@
   text-align: center;
   background-color: #150E28;
 }
-
-.page-container {
-  display: flex;
-  perspective: 1000px; /* Depth of 3D effect */
-}
-
-.page {
-  width: 100%;
-  padding: 2rem;
-  background-color: #fff;
-  transition: transform 0.5s; /* Apply transition to the transform property */
-  transform-origin: left center; /* Set the origin for the flip animation */
-}
-
-.page-container:hover .page {
-  transform: rotateY(-180deg); /* Flip the page on hover */
-}
-

@@ -1,8 +1,7 @@
 import data from "../../data.json";
-import trophy from "../assets/images/trophy.svg";
-import rewards from "../assets/images/Rewards.svg";
+import trophy from "../assets/images/trophy.webp";
+import rewards from "../assets/images/Rewards.webp";
 import purplestar from "../assets/images/purple-star.svg";
-import transparentstar from "../assets/images/transparent-star.svg";
 
 export const Prizes = () => {
   return (
@@ -25,14 +24,7 @@ export const Prizes = () => {
       </p>
       <div className="md:flex md:justify-center md:scale-150">
         <span className="flex justify-center mt-10">
-          <img src={trophy} alt="an animated trophy with a dart" />
-          <span>
-            <img
-              className="absolute ml-20 scale-125"
-              src={transparentstar}
-              alt="a transparent star"
-            />
-          </span>
+          <img src={trophy} className="object-contain h-52" alt="an animated trophy with a dart" />
         </span>
         <span className="flex justify-center mt-12">
           <img src={rewards} alt="3 medals with respective cash prizes" />

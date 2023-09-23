@@ -10,7 +10,7 @@ function classNames(...classes: string[]) {
 export function Nav() {
   return (
     <nav>
-      <div className="flex font-ClashDisplay p-5 text-2xl text-white font-extrabold border-b-2 border-b-fuchsia-500 border-opacity-5 mb-8 md:text-3xl">
+      <div className="flex items-center font-ClashDisplay p-5 text-2xl text-white font-extrabold border-b-2 border-b-fuchsia-500 border-opacity-5 mb-8 md:text-3xl">
         <div className="">
           <NavLink className="" to="/">
             get<span className="text-fuchsia-500 ">linked</span>

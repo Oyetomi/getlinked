@@ -1,7 +1,7 @@
 import data from "../../data.json";
 import checkmark from "../assets/images/checkmark.svg";
-import privacyboy from "../../src/assets/images/privacy-boy.svg";
-import secure from "../../src/assets/images/secure.svg";
+import privacyboy from "../../src/assets/images/privacy-boy.webp";
+import secure from "../../src/assets/images/secure.webp";
 import { Button } from "./common/Button.tsx";
 import purplestar from "../assets/images/purple-star.svg";
 import transparentstar from "../assets/images/transparent-star.svg";
@@ -79,12 +79,12 @@ export const Policy = () => {
           <span>
             <img
               src={privacyboy}
-              className="scale-75 m-auto"
+              className="scale-75 m-auto object-contain"
               alt="a boy holding a key standing on a lock"
             />
           </span>
           <img
-            className="scale-75 absolute top-1.5 opacity-40"
+            className="scale-75 absolute top-1.5 left-20 right-28 opacity-40 object-contain"
             src={secure}
             alt="secure"
           />

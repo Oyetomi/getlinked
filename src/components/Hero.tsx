@@ -4,10 +4,10 @@ import flame from "../assets/images/flame.svg";
 import creative from "../assets/images/Creative.svg";
 import star from "../assets/images/star.svg";
 import purplestar from "../assets/images/purple-star.svg";
-import hackathonguy from "../assets/images/Hackathon guy.svg";
-import thebigidea from "../assets/images/The big idea.svg";
-import animatedwoman from "../assets/images/animated-woman-sitting.svg";
-import animatedmanwoman from "../assets/images/animated-man-woman.svg";
+import hackathonguy from "../assets/images/Hackathon guy.webp";
+import thebigidea from "../assets/images/The big idea.webp";
+import animatedwoman from "../assets/images/animated-woman-sitting.webp";
+import animatedmanwoman from "../assets/images/animated-man-woman.webp";
 import transparentstar from "../assets/images/transparent-star.svg";
 import arrow from "../assets/images/arrow.svg";
 import data from "../../data.json";
@@ -113,12 +113,9 @@ export const Hero = () => {
         <Button name="Register"></Button>
       </NavLink>
       <div className="md:flex md:justify-center md:gap-20">
-        <span className="absolute left-12">
-          <img src={transparentstar} alt="" />
-        </span>
         <div className="flex justify-center text-center font-Montserrat text-white text-2xl border border-fuchsia-700 bg-fuchsia-400 bg-opacity-10 rounded-lg py-10 px-20 mb-6 md:text-6xl lg:mb-56 border-opacity-10">
           <div className="flex justify-center space-x-14">
-            <span className="text-2xl md:text-6xl font-bold font-ClashDisplay">
+            <span className="text-4xl md:text-6xl font-bold font-ClashDisplay">
               {hours}
               <span className="text-fuchsia-500">Days</span>
             </span>
@@ -140,7 +137,7 @@ export const Hero = () => {
       <article className="mt-20">
         <div className="border-b-2 border-b-fuchsia-500 border-opacity-5 md:flex md:justify-evenly">
           <figure className=" relative flex justify-center md:scale-100">
-            <img className="" src={thebigidea} alt="a light bulb" />
+            <img className="object-contain w-56 scale-150" src={thebigidea} alt="a light bulb" />
             <span className="absolute top-1/4 left-10 md:scale-125">
               <img src={purplestar} alt="a purple star" />
             </span>
@@ -167,9 +164,10 @@ export const Hero = () => {
             </span>
           </h3>
         </div>
-        <div className="border-b-2 border-b-fuchsia-500 border-opacity-5 md:flex md:justify-center md:mt-12">
+        <div className="border-b-2 border-b-fuchsia-500 border-opacity-5 md:flex md:justify-center md:mt-12 gap-y-9 gap-20">
           <figure className="relative flex justify-center mt-16 md:scale-100">
             <img
+                className="w-56 scale-150 object-contain mb-20"
               src={animatedwoman}
               alt="an animated woman sitting on a chair"
             />

@@ -1,7 +1,7 @@
 import data from "../../data.json";
 import { Disclosure } from "@headlessui/react";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
-import manthinking from "../assets/images/man-questioning-reality.svg";
+import manthinking from "../assets/images/man-questioning-reality.webp";
 import filledquestionmark from "../assets/images/question-mark-filled.svg";
 import transparentquestionmark from "../assets/images/question-mark-transparent.svg";
 
