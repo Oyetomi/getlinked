@@ -89,15 +89,14 @@ export function Nav() {
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <a
-                      href="/"
+                    <div
                       className={classNames(
                         active ? "text-dark-purple" : "text-dark-purple",
                         "block px-4 py-2 text-sm"
                       )}
                     >
                       <NavLink to="contact">Contact</NavLink>
-                    </a>
+                    </div>
                   )}
                 </Menu.Item>
               </div>
