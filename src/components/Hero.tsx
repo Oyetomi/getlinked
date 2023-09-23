@@ -1,7 +1,7 @@
 import image from "../assets/images/curved-stroke_hero.svg";
 import chain from "../assets/images/chain.svg";
 import flame from "../assets/images/flame.svg";
-import creative from "../assets/images/creative.svg";
+import creative from "../assets/images/Creative.svg";
 import star from "../assets/images/star.svg";
 import purplestar from "../assets/images/purple-star.svg";
 import hackathonguy from "../assets/images/Hackathon guy.svg";
