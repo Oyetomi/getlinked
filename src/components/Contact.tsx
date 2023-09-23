@@ -27,7 +27,7 @@ export const Contact = () => {
   const [contactStatus, setContactStatus] = useState<
     "success" | "error" | null
   >(null);
-  const onSubmit: SubmitHandler<FormInput> = async (data) => {
+  const onSubmit: SubmitHandler<FormInput> = async (data:FormInput) => {
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_BASE_URL}/hackathon/contact-form`,

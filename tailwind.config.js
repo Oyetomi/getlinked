@@ -5,26 +5,24 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    backdropFilter: {
+      'none': 'none',
+      'blur': 'blur(20px)',
+    },
     colors: {
+      "fuchsia-400": "#d558fe",
       "fuchsia-500": "#D434FE",
+      'fuchsia-700': "#b501e4",
       "purple-500": "#903AFF",
       "dark-purple": "#150E28",
-      "white":"#ffff"
+      "white":"#ffff",
+      "red": "#FF0000",
     },
     extend: {
       fontFamily: {
         "ClashDisplay": ["ClashDisplay", "sans-serif"],
         "Montserrat": ["Montserrat", "sans-serif"],
       },
-      animation: {
-        border: 'background ease infinite',
-      },
-      keyframes: {
-        background: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
-    },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animated')],
 }}
