@@ -24,10 +24,10 @@ export const Prizes = () => {
       </p>
       <div className="md:flex md:justify-center md:scale-150">
         <span className="flex justify-center mt-10">
-          <img src={trophy} className="object-contain h-52" alt="an animated trophy with a dart" />
+          <img src={trophy} className="object-contain h-300" alt="an animated trophy with a dart" />
         </span>
         <span className="flex justify-center mt-12">
-          <img src={rewards} alt="3 medals with respective cash prizes" />
+          <img src={rewards} className="object-contain w-300" alt="3 medals with respective cash prizes" />
         </span>
       </div>
     </section>

@@ -77,13 +77,13 @@ export const Register = () => {
         </div>
       ) : (
         <section className="md:flex justify-center items-center">
-          <GoBackHome/>
+          <p className="block"><GoBackHome/></p>
           <span className="text-3xl md:mb-16 text-fuchsia-500 font-bold flex ml-10 md:hidden font-Montserrat">
             Register
           </span>
           <div>
             <img
-              className=""
+              className="object-contain w-600"
               src={designer}
               alt="a 3d graphic designer giving a thumbs up"
             />

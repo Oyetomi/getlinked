@@ -90,7 +90,7 @@ export const Faq = () => {
         <div className="flex justify-center mt-32 md:scale-125">
           <span>
             <img
-              className="block md:hidden lg:block"
+              className="block md:hidden lg:block w-300"
               src={manthinking}
               alt="an animated man sitting on a cloud thinking"
             />

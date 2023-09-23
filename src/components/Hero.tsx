@@ -167,7 +167,7 @@ export const Hero = () => {
         <div className="border-b-2 border-b-fuchsia-500 border-opacity-5 md:flex md:justify-center md:mt-12 gap-y-9 gap-20">
           <figure className="relative flex justify-center mt-16 md:scale-100">
             <img
-                className="w-56 scale-150 object-contain mb-20"
+                className="w-75 object-contain mb-20"
               src={animatedwoman}
               alt="an animated woman sitting on a chair"
             />
@@ -206,7 +206,7 @@ export const Hero = () => {
           <img
             src={animatedmanwoman}
             alt="an animated woman an man golding a chart and book respectively"
-            className="object-contain scale-100"
+            className="object-contain scale-100 w-300"
           />
         </figure>
         <article>

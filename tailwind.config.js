@@ -19,6 +19,9 @@ export default {
       "red": "#FF0000",
     },
     extend: {
+      width: {
+        '600': '600px',
+      },
       fontFamily: {
         "ClashDisplay": ["ClashDisplay", "sans-serif"],
         "Montserrat": ["Montserrat", "sans-serif"],
