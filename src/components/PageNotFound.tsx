@@ -1,4 +1,4 @@
-import GoBackHome from "../GoBackHome.tsx";
+import GoBackHome from "./GoBackHome.tsx";
 
 const PageNotFound  = () => {
     return (

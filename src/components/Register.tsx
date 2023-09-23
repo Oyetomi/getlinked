@@ -10,7 +10,7 @@ import axios from "axios";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "./common/Button.tsx";
-import GoBackHome from "../GoBackHome.tsx";
+import GoBackHome from "./GoBackHome.tsx";
 
 type FormInput = {
   email: string;

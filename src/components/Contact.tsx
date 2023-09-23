@@ -8,7 +8,7 @@ import { FaFacebook } from "react-icons/fa";
 import { useState } from "react";
 import purplestar from "../assets/images/purple-star.svg";
 import transparentstar from "../assets/images/transparent-star.svg";
-import GoBackHome from "../GoBackHome.tsx";
+import GoBackHome from "./GoBackHome.tsx";
 
 type FormInput = {
   email: string;
