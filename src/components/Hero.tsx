@@ -14,10 +14,26 @@ import data from "../../data.json";
 
 import { Button } from "./common/Button.tsx";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {useEffect, useMemo, useState} from "react";
 
 export const Hero = () => {
   const [countdown, setCountdown] = useState<number>(24 * 60 * 60); // 24 hours in seconds
+
+  const formattedTime = useMemo(() => {
+    const formatTime = (timeInSeconds: number) => {
+      const hours = Math.floor(timeInSeconds / 3600);
+      const minutes = Math.floor((timeInSeconds % 3600) / 60);
+      const seconds = timeInSeconds % 60;
+
+      return {
+        hours: String(hours).padStart(2, "0"),
+        minutes: String(minutes).padStart(2, "0"),
+        seconds: String(seconds).padStart(2, "0"),
+      };
+    };
+
+    return formatTime(countdown);
+  }, [countdown]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,19 +47,8 @@ export const Hero = () => {
     };
   }, [countdown]);
 
-  const formatTime = (timeInSeconds: number) => {
-    const hours = Math.floor(timeInSeconds / 3600);
-    const minutes = Math.floor((timeInSeconds % 3600) / 60);
-    const seconds = timeInSeconds % 60;
+  const { hours, minutes, seconds } = formattedTime;
 
-    return {
-      hours: String(hours).padStart(2, "0"),
-      minutes: String(minutes).padStart(2, "0"),
-      seconds: String(seconds).padStart(2, "0"),
-    };
-  };
-
-  const { hours, minutes, seconds } = formatTime(countdown);
 
   return (
     <main className="border-b-2 border-b-fuchsia-500 border-opacity-5 ">
